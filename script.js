@@ -57,28 +57,20 @@ function resultFound() {
             const recipeData = data
             console.log(recipeData);
             let l = recipeData.results.length;
- if (recipeData.totalResults === 0) {
-    alert("NO MEALS FOUND")
- }
- else{
-    searchResult.style.display = "flex";
-    result.style.display = "grid";
+            if (recipeData.totalResults === 0) {
+                alert("NO MEALS FOUND")
+            } else {
+                searchResult.style.display = "flex";
+                result.style.display = "grid";
 
-    result.innerHTML = recipeData.results.map(
-        results => `
-        <div class = result-container>
-        <img src = "${results.image}">
-        </div>
-        `
-    )
- }
-            
-        
-           
-
-           
-           
-
+                result.innerHTML = recipeData.results.map(
+                    results => `
+                             <div class = result-container>
+                             <img src = "${results.image}">
+                              </div>
+                              `
+                )
+            }
 
         })
 
