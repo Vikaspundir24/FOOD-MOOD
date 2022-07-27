@@ -157,10 +157,11 @@ color: orange;
 .headline img{
 height: 20px;
 width: 20px;
+transition: 0.2s;
 } 
 .headline img:hover{
     text-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
-    transform: scale(1.08, 1.08);
+    transform: scale(1.3, 1.3);
 
 }
 
@@ -191,6 +192,7 @@ width: 20px;
     border-radius: 50%;
     border: 8px solid white;
     transition: transform .2s;
+    box-shadow:  0px 30px 28px -6px rgba(0, 0, 0, 0.6);;
 }
 
 .top img:hover{

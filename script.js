@@ -1,5 +1,6 @@
 // UNIQUE KEY = apiKey=2dd86708834a48b8b90ee3b687038a25
 // UNIQUE KEY 2 = apiKey=90edaf4613584af6a5651894feb4ce99
+// UNIQUE KEY 3 = apiKey=3e55c57d41b04ecd9354ee0b5095685b
 
 
 
@@ -15,7 +16,7 @@ const goBack = document.querySelector(".goBack")
 /* RANDOM FOOD IN POPULAR SECTION */
 
 
-const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiKey=90edaf4613584af6a5651894feb4ce99")
+const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiKey=3e55c57d41b04ecd9354ee0b5095685b")
     .then(response => {
         return response.json()
     })
@@ -55,7 +56,7 @@ clickBtn.addEventListener("click", () => {
 //RESULT OF SEARCH ITEM
 
 function resultFound() {
-    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=12&apiKey=90edaf4613584af6a5651894feb4ce99`)
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=12&apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
         .then(response => {
             return response.json()
         })
@@ -109,7 +110,7 @@ result.addEventListener('click', e => {
 //MEAL BY ID FOR DETAILED VIEW
 
 function getMealById(mealID) {
-    fetch(`https://api.spoonacular.com/recipes/${mealID}/information?apiKey=90edaf4613584af6a5651894feb4ce99`)
+    fetch(`https://api.spoonacular.com/recipes/${mealID}/information?apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
         .then((res) => res.json())
         .then((data) => {
             const mealData = data;
@@ -117,7 +118,7 @@ function getMealById(mealID) {
 
             detailedView.innerHTML = `
                       <div class="headline">
-                       <a href = "${mealData.sourceUrl} target="_blank"><h1>${mealData.title}</h1></a>
+                       <a href = "#" onclick='window.open("${mealData.sourceUrl}");return false;'><h1>${mealData.title}</h1></a>
                      <img src = "./cross.png" onClick = back()>
                       </div>
            
