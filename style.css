@@ -52,6 +52,7 @@ color: orange;
     align-items: center;
     margin-top: 20px;
     gap: 10px;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.4);
     font-weight: 900;
 
 }
@@ -60,8 +61,11 @@ color: orange;
     font-size: 18px;
     padding: 20px;
     width: 30vw;
-    border-radius: 20px;    
+    border-radius: 20px; 
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);   
+    cursor: pointer;
 }
+
 
 .click-btn{
     font-size: 18px;
@@ -70,6 +74,8 @@ color: orange;
     width: 6vw;
     border-radius: 20px;   
     background-color: orange; 
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 .click-btn:hover{
     color: black;
@@ -113,7 +119,8 @@ color: orange;
 }
 
 .result-container:hover{
-    box-shadow: 0 8px 20px 0 rgba(0,0,0,0.7);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05, 1.05);
 }
 
 .result-container img{
@@ -129,6 +136,91 @@ color: orange;
 .result-container h2:hover{
     color: orange;
 }
+
+.detailed-view{
+    padding: 40px;
+    margin-top: 40px;
+    width: 100%;
+    background-color: hsl(201, 11%, 95%);
+    display:none;
+    flex-direction: column;
+ 
+}
+.detailed-view .top{
+    display: flex;
+}
+.headline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.headline img{
+height: 20px;
+width: 20px;
+} 
+.headline img:hover{
+    text-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+    transform: scale(1.08, 1.08);
+
+}
+
+.headline h1{
+    font-weight: 900;;
+    font-size: 40px;
+    text-decoration: underline;
+    color: black;
+}
+.headline h1:hover{
+    color: orange;
+    cursor: pointer;
+}
+.top{
+    font-size: 23px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+
+}
+
+.top img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    border: 8px solid white;
+    transition: transform .2s;
+}
+
+.top img:hover{
+    opacity: 0.5;
+    transform: scale(1.1);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+
+}
+
+.bottom{
+    margin-top: 30px;
+    font-size: 23px;
+    font-weight: 500;
+}
+.bottom h2{
+    font-size: 35px;
+}
+.bottom h2:hover{
+    color: orange;
+}
+
+.detailed-view .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 .middle{
     font-weight: 900;
     display: flex;
@@ -165,6 +257,7 @@ color: orange;
     align-items: center;
     text-align: center;
     flex-direction: column;
+    
 }
 
 .popular-head h1{
@@ -192,11 +285,14 @@ color: orange;
     height: 8vw;
     border-radius: 50%;
     transition: transform .2s;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.2);
 }
 
 .popular-img img:hover{
     opacity: 0.5;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 .dish h2{

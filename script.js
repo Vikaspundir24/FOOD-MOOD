@@ -1,9 +1,21 @@
-// Fetch for random image in middle part\\
+// UNIQUE KEY = apiKey=2dd86708834a48b8b90ee3b687038a25
+// UNIQUE KEY 2 = apiKey=90edaf4613584af6a5651894feb4ce99
 
-//  //
+
+
+const input = document.querySelector(".input");
+const clickBtn = document.querySelector(".click-btn");
+const searchResult = document.querySelector(".search-result")
+const result = document.querySelector(".result")
+const resultContainer = document.querySelectorAll(".result-container")
+const detailedView = document.querySelector(".detailed-view");
+const goBack = document.querySelector(".goBack")
+
 
 /* RANDOM FOOD IN POPULAR SECTION */
-const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiKey=2dd86708834a48b8b90ee3b687038a25")
+
+
+const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiKey=90edaf4613584af6a5651894feb4ce99")
     .then(response => {
         return response.json()
     })
@@ -23,19 +35,10 @@ const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiK
 
 /* SEARCH RESULT  */
 /* MAIN CODE FROM HERE */
-
-
-const input = document.querySelector(".input");
-const clickBtn = document.querySelector(".click-btn");
-const searchResult = document.querySelector(".search-result")
-const result = document.querySelector(".result")
-// const resultContainer = document.querySelectorAll(".result-container")
-
-
 /* SUBMIT BUTTON CODE */
 
 clickBtn.addEventListener("click", () => {
-    console.log("click")
+    // console.log("click")
 
     if (input.value) {
         resultFound();
@@ -48,8 +51,11 @@ clickBtn.addEventListener("click", () => {
 
 })
 
+
+//RESULT OF SEARCH ITEM
+
 function resultFound() {
-    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=12&apiKey=2dd86708834a48b8b90ee3b687038a25`)
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=12&apiKey=90edaf4613584af6a5651894feb4ce99`)
         .then(response => {
             return response.json()
         })
@@ -64,15 +70,74 @@ function resultFound() {
                 result.style.display = "flex";
 
                 result.innerHTML = recipeData.results.map(
-                    results => `<div class = result-container>
+                    results => `<div class = "result-container" data-mealID= "${results.id}"  >
                     <img src = "${results.image}">
                     <h2>"${results.title}"</h2>
                      </div>`
                 ).join('')
+
             }
 
         })
-
         .catch(err => alert("SOMETHING WENT WRONG"))
+}
+
+
+// GET DETAILS OF CLICKED CARD-CONTAINER DISH
+
+result.addEventListener('click', e => {
+    const mealInfo = e.path.find(item => {
+        if (item.classList) {
+            return item.classList.contains("result-container");
+        } else {
+            return false;
+        }
+    });
+
+
+    if (mealInfo) {
+        const mealID = mealInfo.getAttribute("data-mealID")
+        console.log(mealID)
+        getMealById(mealID);
+    }
+
+    result.style.display = "none";
+    detailedView.style.display = "flex";
+})
+
+
+//MEAL BY ID FOR DETAILED VIEW
+
+function getMealById(mealID) {
+    fetch(`https://api.spoonacular.com/recipes/${mealID}/information?apiKey=90edaf4613584af6a5651894feb4ce99`)
+        .then((res) => res.json())
+        .then((data) => {
+            const mealData = data;
+            console.log(mealData)
+
+            detailedView.innerHTML = `
+                      <div class="headline">
+                       <a href = "${mealData.sourceUrl} target="_blank"><h1>${mealData.title}</h1></a>
+                     <img src = "./cross.png" onClick = back()>
+                      </div>
+           
+            <div class="top">
+                <img src="${mealData.image}" alt="">
+                <p>${mealData.summary}</p>
+            </div>
+            <div class="bottom">
+                 <h2>Procedure</h2>
+                <p>${mealData.instructions}</p>
+            </div>`
+        })
+
+        
+}
+
+function back(){
+    console.log("han")
+    detailedView.style.display = "none";
+    result.style.display = "flex";
 
 }
+  
