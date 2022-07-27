@@ -49,7 +49,7 @@ clickBtn.addEventListener("click", () => {
 })
 
 function resultFound() {
-    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=8&apiKey=2dd86708834a48b8b90ee3b687038a25`)
+    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=12&apiKey=2dd86708834a48b8b90ee3b687038a25`)
         .then(response => {
             return response.json()
         })
@@ -61,15 +61,14 @@ function resultFound() {
                 alert("NO MEALS FOUND")
             } else {
                 searchResult.style.display = "flex";
-                result.style.display = "grid";
+                result.style.display = "flex";
 
                 result.innerHTML = recipeData.results.map(
-                    results => `
-                             <div class = result-container>
-                             <img src = "${results.image}">
-                              </div>
-                              `
-                )
+                    results => `<div class = result-container>
+                    <img src = "${results.image}">
+                    <h2>"${results.title}"</h2>
+                     </div>`
+                ).join('')
             }
 
         })
