@@ -4,7 +4,7 @@ A FOOD RECIPE app based on spoonacular API, that gives the RECIPE DETAILS OF DIF
 
 
 ## Live Link
-[CLick Here➡️]("https://tangerine-pasca-2c9b8e.netlify.app/")
+[CLick Here➡️](https://tangerine-pasca-2c9b8e.netlify.app/)
 
 ## Features
 
