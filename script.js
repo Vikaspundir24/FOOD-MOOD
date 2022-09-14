@@ -55,13 +55,14 @@ clickBtn.addEventListener("click", () => {
 
 //RESULT OF SEARCH ITEM
 
-function resultFound() {
+async function resultFound() {
     fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=100&apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
         .then(response => {
             return response.json()
+            const recipeData = await response.json();
         })
-        .then(data => {
-            const recipeData = data
+        .then(recipeData => {
+            
             console.log(recipeData);
             let l = recipeData.results.length;
             if (recipeData.totalResults === 0) {
