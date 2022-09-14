@@ -139,7 +139,12 @@ color: orange;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
 overflow: hidden;
+=======
+overflow: scroll;
+    height:20rem;
+>>>>>>> c0a40b0c031585b4ad6611cd69d993b76005db37
 
 }
 

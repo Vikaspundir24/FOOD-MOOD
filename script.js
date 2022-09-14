@@ -57,15 +57,25 @@ clickBtn.addEventListener("click", () => {
 
 //RESULT OF SEARCH ITEM
 
+<<<<<<< HEAD
 function resultFound() {
     displayLoading();
+=======
+async function resultFound() {
+>>>>>>> c0a40b0c031585b4ad6611cd69d993b76005db37
     fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=100&apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
         .then(response => {
             return response.json()
+            const recipeData = await response.json();
         })
+<<<<<<< HEAD
         .then(data => {
             hideLoading();
             const recipeData = data
+=======
+        .then(recipeData => {
+            
+>>>>>>> c0a40b0c031585b4ad6611cd69d993b76005db37
             console.log(recipeData);
             let l = recipeData.results.length;
             if (recipeData.totalResults === 0) {
@@ -146,6 +156,7 @@ function back(){
 
 }
   
+<<<<<<< HEAD
 window.addEventListener('load', () => {
     loaderContainer.style.display = 'none';
 });
@@ -157,3 +168,5 @@ const displayLoading = () => {
 const hideLoading = () => {
     loaderContainer.style.display = 'none';
 };
+=======
+>>>>>>> c0a40b0c031585b4ad6611cd69d993b76005db37
