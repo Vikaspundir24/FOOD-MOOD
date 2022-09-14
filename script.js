@@ -11,6 +11,7 @@ const result = document.querySelector(".result")
 const resultContainer = document.querySelectorAll(".result-container")
 const detailedView = document.querySelector(".detailed-view");
 const goBack = document.querySelector(".goBack")
+const loaderContainer = document.querySelector('.loader-container');
 
 
 /* RANDOM FOOD IN POPULAR SECTION */
@@ -21,6 +22,7 @@ const popuFood = fetch("https://api.spoonacular.com/recipes/random?number=6&apiK
         return response.json()
     })
     .then(data => {
+        
         const finalData = data
         console.log(finalData)
 
@@ -56,11 +58,13 @@ clickBtn.addEventListener("click", () => {
 //RESULT OF SEARCH ITEM
 
 function resultFound() {
+    displayLoading();
     fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=100&apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
         .then(response => {
             return response.json()
         })
         .then(data => {
+            hideLoading();
             const recipeData = data
             console.log(recipeData);
             let l = recipeData.results.length;
@@ -142,3 +146,14 @@ function back(){
 
 }
   
+window.addEventListener('load', () => {
+    loaderContainer.style.display = 'none';
+});
+
+const displayLoading = () => {
+    loaderContainer.style.display = 'block';
+};
+
+const hideLoading = () => {
+    loaderContainer.style.display = 'none';
+};
