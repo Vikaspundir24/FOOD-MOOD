@@ -14,7 +14,7 @@ const loaderContainer = document.querySelector(".loader-container");
 /* RANDOM FOOD IN POPULAR SECTION */
 
 const popuFood = fetch(
-        "https://api.spoonacular.com/recipes/random?number=6&apiKey=3e55c57d41b04ecd9354ee0b5095685b"
+        "https://api.spoonacular.com/recipes/random?number=6&apiKey=90edaf4613584af6a5651894feb4ce99"
     )
     .then((response) => {
         return response.json();
@@ -57,7 +57,7 @@ clickBtn.addEventListener("click", () => {
 
 function resultFound() {
     fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=24&apiKey=3e55c57d41b04ecd9354ee0b5095685b`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=24&apiKey=90edaf4613584af6a5651894feb4ce99`
         )
         .then((response) => {
             return response.json();
@@ -109,7 +109,7 @@ result.addEventListener('click', (e) => {
 
 function getMealById(mealID) {
     fetch(
-            `https://api.spoonacular.com/recipes/${mealID}/information?apiKey=3e55c57d41b04ecd9354ee0b5095685b`
+            `https://api.spoonacular.com/recipes/${mealID}/information?apiKey=90edaf4613584af6a5651894feb4ce99`
         )
         .then((res) => res.json())
         .then((data) => {
