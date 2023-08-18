@@ -21,6 +21,7 @@ A FOOD RECIPE app based on spoonacular API, that gives the RECIPE DETAILS OF DIF
 - HTML
 - CSS
 - Vanilla js
+- Fetch API
 
 ## Sample Images
 
