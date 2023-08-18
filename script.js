@@ -56,18 +56,11 @@ clickBtn.addEventListener("click", () => {
 //RESULT OF SEARCH ITEM
 
 function resultFound() {
-<<<<<<< HEAD
     fetch(
             `https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=24&apiKey=3e55c57d41b04ecd9354ee0b5095685b`
         )
         .then((response) => {
             return response.json();
-=======
-   
-    fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=40&apiKey=3e55c57d41b04ecd9354ee0b5095685b`)
-        .then(response => {
-            return response.json()
->>>>>>> 0c6dde848373876788420d08e1b708d84f6423b3
             const recipeData = response.json();
         })
         .then((data) => {
