@@ -10,7 +10,7 @@ A FOOD RECIPE app based on spoonacular API, that gives the RECIPE DETAILS OF DIF
 
 - Completely responsive UI
 - An input for users to type MEAL/DISH NAME.
-- Max 12 Meals to be displayed.
+- Max 24 Meals to be displayed.
 - Detailed Instruction and Summary of Meals.
 - Popular Dishes Section.
 
@@ -21,6 +21,7 @@ A FOOD RECIPE app based on spoonacular API, that gives the RECIPE DETAILS OF DIF
 - HTML
 - CSS
 - Vanilla js
+- Fetch API
 
 ## Sample Images
 
