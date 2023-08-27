@@ -456,7 +456,7 @@ transition: 0.2s;
     }
     
     .detailed-view{
-        padding: 40px;
+        padding: 20px;
         margin-top: 40px;
         width: 100%;
         background-color: hsl(201, 11%, 95%);
@@ -466,6 +466,7 @@ transition: 0.2s;
     }
     .detailed-view .top{
         display: flex;
+        flex-direction: column;
     }
     .headline{
         display: flex;
@@ -485,7 +486,7 @@ transition: 0.2s;
     
     .headline h1{
         font-weight: 900;;
-        font-size: 40px;
+        font-size: 30px;
         text-decoration: underline;
         color: black;
     }
@@ -494,7 +495,7 @@ transition: 0.2s;
         cursor: pointer;
     }
     .top{
-        font-size: 23px;
+        font-size: 18px;
         font-weight: 900;
         display: flex;
         justify-content: center;
@@ -505,8 +506,8 @@ transition: 0.2s;
     }
     
     .top img{
-        width: 20vw;
-        height: 20vw;
+        width: 50vw;
+        height: 50vw;
         border-radius: 50%;
         border: 8px solid white;
         transition: transform .2s;
@@ -523,11 +524,11 @@ transition: 0.2s;
     
     .bottom{
         margin-top: 30px;
-        font-size: 23px;
+        font-size: 18 px;
         font-weight: 500;
     }
     .bottom h2{
-        font-size: 35px;
+        font-size: 30px;
     }
     .bottom h2:hover{
         color: orange;
@@ -603,8 +604,8 @@ transition: 0.2s;
     
     .popular-img img{
         border: 6px solid white;
-        width: 40vw;
-        height: 40vw;
+        width: 30vw;
+        height: 30vw;
         border-radius: 50%;
         transition: transform .2s;
         box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.2);

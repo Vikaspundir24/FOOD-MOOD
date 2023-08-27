@@ -127,7 +127,7 @@ function getMealById(mealID) {
                 <p>${mealData.summary}</p>
             </div>
             <div class="bottom">
-                 <h2>Procedure</h2>
+                 <h2>Procedure:</h2>
                 <p>${mealData.instructions}</p>
             </div>`;
         });
