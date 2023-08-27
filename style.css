@@ -403,7 +403,7 @@ transition: 0.2s;
     .search-result h1{
         margin-top: 40px;
         font-weight: 900;
-        font-size: 40px;
+        font-size: 30px;
     }
     .search-result h1 span{
         color: orange;
@@ -433,6 +433,7 @@ transition: 0.2s;
         padding:10px;
         border-radius: 22px; 
         cursor: pointer;   
+        font-size: 10px;
     }
     
     .result-container:hover{
@@ -620,6 +621,6 @@ transition: 0.2s;
     .dish h2{
         width:90vw;
         margin-top: 5px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
