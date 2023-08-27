@@ -57,7 +57,7 @@ clickBtn.addEventListener("click", () => {
 
 function resultFound() {
     fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=24&apiKey=90edaf4613584af6a5651894feb4ce99`
+            `https://api.spoonacular.com/recipes/complexSearch?query=${input.value}&number=100&apiKey=90edaf4613584af6a5651894feb4ce99`
         )
         .then((response) => {
             return response.json();

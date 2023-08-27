@@ -119,6 +119,7 @@ color: orange;
 .search-result{
     display:none;
     justify-content: center;
+    transition: 1s;
 }
 .search-result h1{
     margin-top: 40px;
@@ -130,7 +131,7 @@ color: orange;
 }
 
 .result{
-    padding: 20px;
+    padding: 70px;
     gap: 12px;
     margin-top: 40px;
     width: 100%;
@@ -139,7 +140,8 @@ color: orange;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-overflow: hidden;
+     overflow-y: scroll;
+     max-height: 70vh;
 
 }
 
@@ -337,4 +339,287 @@ transition: 0.2s;
     width:12vw;
     margin-top: 5px;
     font-size: 18px;
+}
+
+@media screen and (max-width:767px){
+
+    
+   
+    .wrapper{
+        width: 95vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav{
+        margin-top: 30px;
+        font-weight: 900;
+        display: flex;
+        gap: 0px;
+        justify-content: center;
+    }
+    
+    
+    
+    .nav-list{
+      display: none;
+    }
+    
+    
+    
+    .search-btn{
+        border-radius: 30px;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        display: flex;
+        justify-content:center;
+        margin-top: 20px;
+        gap: 10px;
+
+    }
+    
+    .input{
+        font-size: 19px;
+        padding: 10px;
+        width: 30vw;
+        width: 80vw;
+    }
+    
+    
+    .click-btn{
+        font-size: 14px;
+        padding: 10px;
+        width: 30vw;
+    }
+    .search-result{
+        display:none;
+        justify-content: center;
+        transition: 1s;
+    }
+    .search-result h1{
+        margin-top: 40px;
+        font-weight: 900;
+        font-size: 40px;
+    }
+    .search-result h1 span{
+        color: orange;
+    }
+    
+    .result{
+        padding: 20px;
+        gap: 12px;
+        margin-top: 40px;
+        width: 100%;
+        background-color: hsl(201, 11%, 95%);
+        display:none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+         overflow-y: scroll;
+         max-height: 70vh;
+    
+    }
+    
+    .result-container{
+        height: auto;
+        width: 40vw;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding:10px;
+        border-radius: 22px; 
+        cursor: pointer;   
+    }
+    
+    .result-container:hover{
+        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+        transform: scale(1.05, 1.05);
+    }
+    
+    .result-container img{
+        border-radius: 20px;
+     max-width: 100%;
+     max-height: 100%;
+    }
+    .result-container h2{
+        font-weight: 500;
+        width: 30vw;
+        padding: 5px;
+    }
+    .result-container h2:hover{
+        color: orange;
+    }
+    
+    .detailed-view{
+        padding: 40px;
+        margin-top: 40px;
+        width: 100%;
+        background-color: hsl(201, 11%, 95%);
+        display:none;
+        flex-direction: column;
+     
+    }
+    .detailed-view .top{
+        display: flex;
+    }
+    .headline{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .headline img{
+    height: 20px;
+    width: 20px;
+    transition: 0.2s;
+    } 
+    .headline img:hover{
+        text-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+        transform: scale(1.3, 1.3);
+    
+    }
+    
+    .headline h1{
+        font-weight: 900;;
+        font-size: 40px;
+        text-decoration: underline;
+        color: black;
+    }
+    .headline h1:hover{
+        color: orange;
+        cursor: pointer;
+    }
+    .top{
+        font-size: 23px;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+    
+    }
+    
+    .top img{
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        border: 8px solid white;
+        transition: transform .2s;
+        box-shadow:  0px 30px 28px -6px rgba(0, 0, 0, 0.6);;
+    }
+    
+    .top img:hover{
+        opacity: 0.5;
+        transform: scale(1.1);
+        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    
+    }
+    
+    .bottom{
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: 500;
+    }
+    .bottom h2{
+        font-size: 35px;
+    }
+    .bottom h2:hover{
+        color: orange;
+    }
+    
+    .detailed-view .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+    .middle{
+        font-weight: 900;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        align-items: center;
+        gap: 70px;
+        flex-direction: column;
+    }
+    .left h1{
+        font-size: 40px;
+    }
+    .left h1 span{
+        color: orange;
+    }
+    
+    .left p{
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    
+    .right img{
+        border: 8px solid hsl(201, 11%, 95%);
+        width: 60vw;
+        border-radius: 60%;
+    }
+    
+    .popular{
+        font-weight: 900;
+        padding: 50px;
+        margin-top: 30px;
+        background-color: hsl(201, 11%, 95%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        
+    }
+    
+    .popular-head h1{
+        font-size: 50px;
+    }
+    .popular-head h1 span{
+        color: orange;
+    }
+    
+    .popular-head p{
+        font-size: 20px;
+        margin-top: 8px;
+    }
+    
+    .popular-img{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .popular-img img{
+        border: 6px solid white;
+        width: 40vw;
+        height: 40vw;
+        border-radius: 50%;
+        transition: transform .2s;
+        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .popular-img img:hover{
+        opacity: 0.5;
+        transform: scale(1.1);
+        box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+
+    
+    .dish h2{
+        width:90vw;
+        margin-top: 5px;
+        font-size: 18px;
+    }
 }
